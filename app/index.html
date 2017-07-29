@@ -20,6 +20,22 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
 <!-- Application Files -->
 <script src="/scripts/app.js"></script>
+<!-- FireBase -->
+     <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+     <!-- AngularFire -->
+     <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD8ERflBGaH-42jllYhY1jF3Ns5YvnyWvI",
+    authDomain: "messenger-eed38.firebaseapp.com",
+    databaseURL: "https://messenger-eed38.firebaseio.com",
+    projectId: "messenger-eed38",
+    storageBucket: "messenger-eed38.appspot.com",
+    messagingSenderId: "99851347663"
+  };
+  firebase.initializeApp(config);
+</script>
     
 </body>
 </html>
