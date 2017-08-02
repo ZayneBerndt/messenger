@@ -50,13 +50,19 @@ left:10px;
 
 .chatbox{
     position: absolute;
-    bottom:30px;
-    left:200px;
-    font-size: 1rem;
-    width: 30%;
+    bottom:300px;
+    left:30px;
+    font-size: 2rem;
+/*    width: 10%;*/
     height: 150px;
     color: black;
-    background-color: aqua;
+/*    background-color: aqua;*/
+  
+}
+
+.modal {
+    margin-top: 10px;
+    background-color:#939eff;
 }
 
 

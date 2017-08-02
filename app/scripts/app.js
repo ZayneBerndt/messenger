@@ -12,11 +12,13 @@
                  controller: 'MessengerCtrl as messenger',
                  templateUrl: '/templates/messenger.html'
              });
+        
+       
      }
     
     
     
      angular
-         .module('messenger', ['ui.router', 'firebase'])
+         .module('messenger', ['ui.router', 'firebase', 'ui.bootstrap'])
          .config(config); 
  })();
