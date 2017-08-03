@@ -1,16 +1,19 @@
 (function() {
     function MessengerCtrl(Room, $uibModal) {
-     
     
-    this.rooms = Room.all;
-        
-        this.addRoom = function() {
-            $uibModal.open ({
+        var room = this;
+          room.rooms = Room.all;
+         
+         
+         room.newRoom = function() {
+             $uibModal.open({
                  templateUrl: '/templates/modal.html',
+                 size: 'sm',
                  controller: 'ModalCtrl as modal'
-            });
-     }
-    }
+             });
+         }
+          
+      }
 
 
 angular
