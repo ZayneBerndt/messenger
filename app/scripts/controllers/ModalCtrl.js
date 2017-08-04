@@ -1,21 +1,20 @@
 (function() {
-    function ModalCtrl(Room, $uibModalInstance) {
-        
-        var modal = this;
-
-         this.close = function() {
+     function ModalCtrl(Room, $uibModalInstance) {
+         var modal = this;
+         modal.close = function () {
              $uibModalInstance.dismiss();
          };
- 
+         
+        
          modal.createRoom = function () {
              var roomName = document.getElementById('roomName').value;
              Room.add(roomName);
-              $uibModalInstance.close();
+             $uibModalInstance.close();
          };
      }
-
-angular
+ 
+     angular
          .module('messenger')
-         .controller('ModalCtrl', ['Room', '$uibModalInstance',  ModalCtrl]);
+         .controller('ModalCtrl', ['Room', '$uibModalInstance', '$cookies', ModalCtrl]);
  })();         
  

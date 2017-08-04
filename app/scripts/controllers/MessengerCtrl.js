@@ -1,24 +1,22 @@
 (function() {
-    function MessengerCtrl(Room, $uibModal) {
+    function MessengerCtrl(Room, $uibModal, Message, $scope) {
     
-        var room = this;
-          room.rooms = Room.all;
-         
-         
-         room.newRoom = function() {
-             $uibModal.open({
-                 templateUrl: '/templates/modal.html',
-                 size: 'sm',
-                 controller: 'ModalCtrl as modal'
-             });
+      var room = this;
+      room.currentRoom = null;
+      room.rooms = Room.all;
+  
+    }
+    
+         this.showRoom = function(room) {
+             this.currentRoom = room;
+             this.messages = Message.getByRoomId(room.currentRoom.$id);
          }
-          
-      }
+ 
 
 
 angular
     .module('messenger')
-    .controller('MessengerCtrl', [ 'Room','$uibModal', MessengerCtrl]);
+    .controller('MessengerCtrl', [ 'Room','$uibModal', 'Message', MessengerCtrl]);
 
 
 
