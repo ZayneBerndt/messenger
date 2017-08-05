@@ -5,12 +5,16 @@
       room.currentRoom = null;
       room.rooms = Room.all;
   
-    }
+    };
     
-         this.showRoom = function(room) {
-             this.currentRoom = room;
-             this.messages = Message.getByRoomId(room.currentRoom.$id);
-         }
+    
+         this.showRoom = function(rm) {
+            room.currentRoom = rm;
+            room.messages = Message.getByRoomId(room.currentRoom.$id);
+        };
+        
+     
+         
  
 
 

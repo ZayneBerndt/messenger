@@ -12,7 +12,6 @@
  		return Message;
  		
  	}
- 
  	angular
  		.module('messenger')
  		.factory('Message', ['$firebaseArray', Message]);

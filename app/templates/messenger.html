@@ -1,24 +1,31 @@
 <div class="navigation">
-     <div class="navigation-header">
-         <h3 class="navigation-title">Messenger</h3>
-         <span>
-             <button type="button" class="new-room" ng-click="room.newRoom()">New Room</button>
-         </span>    
-     </div>
-     <div class="chatbox">
+    <div class="navigation-header">
+        <h3 class="navigation-title">Messenger</h3>
+    <span>
+<button type="button" class="new-room" ng-click="room.newRoom()">New Room</button>
+    </span>    
+    </div>
+    <div class="chatbox">
 
-    <div ng-repeat="room in messenger.rooms">{{ room.$value }}</div>
 
+
+        <div class="room-name" ng-repeat="room in messenger.rooms">
+            <a ng-click="this.showRoom(room)">{{ room.$value }}</a>
+        </div>
+
+    </div>
 </div>
- </div>
 
 
 <div class="messages">
     <div class="messages-header">
         <h3>{{ room.currentRoom.$value }}</h3>
     </div>
+
+
     <div class="messages-body" ng-repeat="message in room.messages">
         <div class="username">{{ message.username }}</div>
-        <div class="timestamp">{{ message.sentAt }}</div>
+        <div class="timestamp">{{ message.sentAt | date : "shortTime" }}</div>
         <div class="user-message">{{ message.content }}</div>
     </div>
+</div>

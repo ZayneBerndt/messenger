@@ -7,7 +7,7 @@
      left: 0px;
      width: 18%;
      height: 100%;
-     background-color: rgb(148, 247, 150)
+     background-color:#C6E1E4 ;
      z-index: 1;
      padding: 10px;
  }
@@ -26,16 +26,23 @@
      border-color: darkslateblue;
      position: fixed;
      top: 0px;
-     left: 250px;
-     width: 82%;
+     left: 230px;
+     width: 80%;
      height: 100%;
-     background-color: rgba(100, 5, 200, .10);
+     background-color: #E7E9ED;
      z-index: 2;
      overflow: scroll;
  }
  .messages-body{
      padding-left: 20px;
  }
+
+.messages-header{
+font-weight: bold;
+colour : orange;
+font-size: 3rem;
+
+}
  .messages-body .username {
      font-weight: bold;
  }
@@ -64,4 +71,8 @@
  .message-box {
      width: 900px;
  } 
+
+.room-name {
+cursor: pointer;
+}
 
