@@ -1,15 +1,14 @@
 (function() {
+ 
      function ModalCtrl(Room, $uibModalInstance) {
-         var modal = this;
-         modal.close = function () {
-             $uibModalInstance.dismiss();
-         };
          
-        
-         modal.createRoom = function () {
-             var roomName = document.getElementById('roomName').value;
-             Room.add(roomName);
+         this.create = function() {
+             Room.add(this.newRoom);
              $uibModalInstance.close();
+         };
+ 
+         this.cancel = function () {
+             $uibModalInstance.dismiss();
          };
      }
  

@@ -2,15 +2,15 @@
     <div class="navigation-header">
         <h3 class="navigation-title">Messenger</h3>
     <span>
-<button type="button" class="new-room" ng-click="room.newRoom()">New Room</button>
+        <input>{{roomName.$value}}</input> 
+<button type="button" class="new-room" ng-click="this.addRoom()">New Room</button>
     </span>    
     </div>
+    
+    
     <div class="chatbox">
-
-
-
         <div class="room-name" ng-repeat="room in messenger.rooms">
-            <a ng-click="this.showRoom(room)">{{ room.$value }}</a>
+            <a ng-click="setRoom(room)">{{ room.$value }}</a>
         </div>
 
     </div>
@@ -19,7 +19,7 @@
 
 <div class="messages">
     <div class="messages-header">
-        <h3>{{ room.currentRoom.$value }}</h3>
+        <h3>{{ currentroom.$value}}</h3>
     </div>
 
 

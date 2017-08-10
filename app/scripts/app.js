@@ -11,6 +11,13 @@
                  url: '/messenger',
                  controller: 'MessengerCtrl as messenger',
                  templateUrl: '/templates/messenger.html'
+             })
+        
+               $stateProvider
+             .state('signin', {
+                 url: '/signin',
+                 controller: 'SigninCtrl as signin',
+                 templateUrl: '/templates/signin.html'
              });
         
        
