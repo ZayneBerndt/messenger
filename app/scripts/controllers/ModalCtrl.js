@@ -1,9 +1,10 @@
 (function() {
  
      function ModalCtrl(Room, $uibModalInstance) {
-         
-         this.create = function() {
-             Room.add(this.newRoom);
+       var modal = this;  
+         this.createRoom = function() {
+             var roomName = document.getElementById('roomName').value;
+             Room.add(roomName);
              $uibModalInstance.close();
          };
  
@@ -14,6 +15,6 @@
  
      angular
          .module('messenger')
-         .controller('ModalCtrl', ['Room', '$uibModalInstance', '$cookies', ModalCtrl]);
+         .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
  })();         
  

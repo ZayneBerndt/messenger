@@ -2,15 +2,18 @@
     <div class="navigation-header">
         <h3 class="navigation-title">Messenger</h3>
     <span>
-        <input>{{roomName.$value}}</input> 
-<button type="button" class="new-room" ng-click="this.addRoom()">New Room</button>
-    </span>    
+    <input type="text" id="roomName"></input> 
+    <button type="button" class="new-room" ng-click="messenger.addRoom()">New Room</button>
+</span>    
     </div>
+    
+        
+
     
     
     <div class="chatbox">
         <div class="room-name" ng-repeat="room in messenger.rooms">
-            <a ng-click="setRoom(room)">{{ room.$value }}</a>
+            <a ng-click="messenger.setCurrentRoom(room.$id)">{{ room.name }}</a>
         </div>
 
     </div>

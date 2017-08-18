@@ -1,27 +1,23 @@
 (function() {
-    function MessengerCtrl(Room, $uibModal, Message, $scope) {
+    function MessengerCtrl(Room, $uibModal, Message) {
     
-      var room = this;
-      room.rooms = Room.all;
-      this.currentRoom = room;
-  
-    };
-    
-    this.addRoom = function(roomName) {
-        firebase.database().ref('rooms/' + roomName).set({
-          rooms: roomName  
-        
-             
-             });
-       
-      }
-    
-   this.setRoom = function(room) {
-   this. currentRoom = room;
-   }
-         
- 
+        this.rooms = Room.all;
+        this.currentRoomId = null;
+        console.log(this.rooms)
 
+
+        this.addRoom = Room.add
+
+//        this.showRoom = function(room) {
+//            this.currentRoom = room;
+//        }
+        
+        this.setCurrentRoom = function (roomId){
+            console.log(roomId)
+            this.currentRoomId = roomId
+        }
+   
+    }
 
 angular
     .module('messenger')
