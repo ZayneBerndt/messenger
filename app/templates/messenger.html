@@ -13,7 +13,7 @@
     
     <div class="chatbox">
         <div class="room-name" ng-repeat="room in messenger.rooms">
-            <a ng-click="messenger.setCurrentRoom(room.$id)">{{ room.name }}</a>
+            <a ng-click="messenger.setCurrentRoom(room)" >{{ room.name }}</a>
         </div>
 
     </div>
@@ -21,9 +21,7 @@
 
 
 <div class="messages">
-    <div class="messages-header">
-        <h3>{{ currentroom.$value}}</h3>
-    </div>
+    <div class="messages-header">{{messenger.currentRoom.name}}</div>
 
 
     <div class="messages-body" ng-repeat="message in room.messages">
