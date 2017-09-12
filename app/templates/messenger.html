@@ -21,12 +21,10 @@
 
 
 <div class="messages">
-    <div class="messages-header">{{messenger.currentRoom.name}}</div>
-
-
+    <div class="messages-header">{{messenger.currentRoom.name}}</div>       
     <div class="messages-body" ng-repeat="message in room.messages">
-        <div class="username">{{ message.username }}</div>
-        <div class="timestamp">{{ message.sentAt | date : "shortTime" }}</div>
-        <div class="user-message">{{ message.content }}</div>
+    <div class="username"> {{ message.username }}</div>
+    <div class="timestamp">{{ message.sentAt | date : "shortTime" }}</div>
+    <div class="user-message">{{ message.content }}</div>
     </div>
 </div>

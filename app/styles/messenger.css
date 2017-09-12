@@ -33,18 +33,22 @@
      z-index: 2;
      overflow: scroll;
  }
- .messages-body{
-     padding-left: 20px;
- }
+.messages-body{
+    padding-left: 20px;
+     
+}
 
 .messages-header{
-font-weight: bold;
-colour : orange;
-font-size: 3rem;
-
+    font-weight: bold;
+    colour : orange;
+    font-size: 3rem;
+    background-color: green;
 }
+
  .messages-body .username {
      font-weight: bold;
+     background-color: orangered;
+     position: fixed;
  }
  
  .messages-body .timestamp {

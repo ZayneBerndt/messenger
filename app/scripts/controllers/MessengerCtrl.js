@@ -13,9 +13,10 @@
     
         
         
-//        this.setCurrentRoom = function (roomId){
-//            console.log(roomId)
-//            this.currentRoomId = roomId
+        this.setCurrentRoom = function (roomId){
+            console.log(roomId)
+            this.currentRoomId = roomId
+        }
 //            
 //            this.CurrentRoom = function(room) {
 //            room.CurrentRoom = roomName;
