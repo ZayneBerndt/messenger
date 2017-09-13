@@ -27,6 +27,6 @@
     
     
      angular
-         .module('messenger', ['ui.router', 'firebase',  'ui.bootstrap'])
+         .module('messenger', ['ui.router', 'firebase',  'ui.bootstrap', 'ngCookies'])
          .config(config); 
  })();

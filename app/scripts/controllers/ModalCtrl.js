@@ -1,6 +1,6 @@
 (function() {
  
-     function ModalCtrl(Room, $uibModalInstance) {
+     function ModalCtrl($cookies, Room, $uibModalInstance) {
        var modal = this;  
          this.createRoom = function() {
              var roomName = document.getElementById('roomName').value;
@@ -10,11 +10,18 @@
  
          this.cancel = function () {
              $uibModalInstance.dismiss();
+         }
+         
+         this.setCurrentUser = function(username) {
+             $cookies.put('messengerCurrentUser', username);
+             this.cancel();
+             alert($cookies.get('messengerCurrentUser'));
          };
+         
      }
  
      angular
          .module('messenger')
-         .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
+         .controller('ModalCtrl', ['$cookies','Room', '$uibModalInstance', ModalCtrl]);
  })();         
  
