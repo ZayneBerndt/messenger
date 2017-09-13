@@ -9,7 +9,7 @@
     
         
 
-    
+  
     
     <div class="chatbox">
         <div class="room-name" ng-repeat="room in messenger.rooms">
@@ -17,8 +17,7 @@
         </div>
 
     </div>
-</div>
-
+  </div>
 
 <div class="messages">
     <div class="messages-header">{{messenger.currentRoom.name}}</div>       
@@ -27,4 +26,15 @@
     <div class="timestamp">{{ message.sentAt | date : "shortTime" }}</div>
     <div class="user-message">{{ message.content }}</div>
     </div>
+    
+    <form name="newMessageForm" class="messages-send" ng-submit="messenger.sendMessage(newMessage)">
+    <input name="newMessage" ng-model="newMessage" required/>
+    <button type="submit">Send</button>
+</form>
+    
+    
 </div>
+
+
+        
+        

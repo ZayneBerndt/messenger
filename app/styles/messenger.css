@@ -80,3 +80,11 @@
 cursor: pointer;
 }
 
+.messages-send {
+    position: relative;
+    width:90%;
+    bottom: 0px;
+    font-weight: bold;
+    colour : orange;
+    font-size: 3rem;
+}
