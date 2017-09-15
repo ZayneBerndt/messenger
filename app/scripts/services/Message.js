@@ -11,10 +11,14 @@
  		
         
         Message.send = function(newMessage) {
-        
-            Message.messages
-            
-        };
+             var messages = $firebaseArray(ref);
+             messages.$add({
+                 content: newMessage,
+                 sentAt: '1:43 pm',
+                 username: 'Zayne',
+                 roomID: '-Kh8c8l6gU_I5f_2BSjQ'
+             })
+        }
         
  		return Message;
  		
