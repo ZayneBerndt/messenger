@@ -1,5 +1,5 @@
 (function() {
-    function MessengerCtrl(Room, $uibModal, Message, $scope) {
+    function MessengerCtrl($scope, $cookies, Room, $uibModal, Message) {
 
         this.rooms = Room.all;
         this.currentRoomId = null;
@@ -22,14 +22,14 @@
         };     
         
         this.sendMessage = function(newMessage) {
-        Message.send = (newMessage);
+        Message.send = (newMessage , this.currentRoomId);
         
         }
     }
 
 angular
     .module('messenger')
-    .controller('MessengerCtrl', [ 'Room','$uibModal', 'Message',  MessengerCtrl]);
+    .controller('MessengerCtrl', ['$scope','$cookies', 'Room','$uibModal', 'Message',  MessengerCtrl]);
 
 
 

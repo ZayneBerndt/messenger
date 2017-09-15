@@ -1,8 +1,8 @@
 (function() {
- 	function Message($firebaseArray) {
+ 	function Message($cookies,$firebaseArray) {
  		var Message = {};
  		
- 		var ref = firebase.database().ref().child("Messages");
+ 		var ref = firebase.database().ref().child("messages");
  		Message.messages = $firebaseArray(ref);
  		//filter messages by roomId
  		Message.getByRoomId = function(roomId) {
@@ -10,13 +10,14 @@
  		}
  		
         
-        Message.send = function(newMessage) {
+        Message.send = function(newMessage, currentRoom) {
+             var d = new Date();
              var messages = $firebaseArray(ref);
              messages.$add({
                  content: newMessage,
-                 sentAt: '1:43 pm',
-                 username: 'Zayne',
-                 roomID: '-Kh8c8l6gU_I5f_2BSjQ'
+                 sentAt: d.toTimeString(),
+                 username: $cookies.get('messengerCurrentUser'),
+                 roomID: currentRoom
              })
         }
         
@@ -25,5 +26,5 @@
  	}
  	angular
  		.module('messenger')
- 		.factory('Message', ['$firebaseArray', Message]);
+ 		.factory('Message', ['$cookies','$firebaseArray', Message]);
  })(); 
