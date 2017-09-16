@@ -21,10 +21,11 @@
         
         };     
         
-        this.sendMessage = function(newMessage) {
-        Message.send = (newMessage , this.currentRoomId);
-        
-        }
+//        this.sendMessage = function(newMessage) {
+//        Message.send = (newMessage , this.currentRoomId);
+//        
+//        }
+        $scope.message = Message
     }
 
 angular

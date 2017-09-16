@@ -27,7 +27,7 @@
     <div class="user-message">{{ message.content }}</div>
     </div>
     
-    <form name="newMessageForm" class="messages-send" ng-submit="messenger.sendMessage(newMessage)">
+    <form name="newMessageForm" class="messages-send" ng-submit="message.send(newMessage)">
     <input name="newMessage" ng-model="newMessage" required/>
     <button type="submit">Send</button>
 </form>
