@@ -10,7 +10,7 @@
         };
 
         this.cancel = function () {
-            $ui bModalInstance.dismiss();
+            $uibModalInstance.dismiss();
         };
 
         this.setCurrentUser = function(username) {

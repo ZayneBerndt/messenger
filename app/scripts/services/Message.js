@@ -22,7 +22,7 @@
 //                 roomID: currentRoomID
 //             })
                 Message.messages.$add({
-                 content: "hi",
+                 content: "",
                  sentAt: 12345,
                  username: 'toast',
                  roomID: 'fbhjkwdbf'
