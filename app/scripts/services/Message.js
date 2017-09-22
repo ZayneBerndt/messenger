@@ -13,19 +13,12 @@
         
         Message.send = function(newMessage, currentRoomID) {
             console.log("sending")
-             var d = new Date();
-//             var messages = $firebaseArray(ref);
-//             Message.messages.$add({
-//                 content: newMessage,
-//                 sentAt: d.toTimeString(),
-//                 username: $cookies.get('messengerCurrentUser'),
-//                 roomID: currentRoomID
-//             })
+             
                 Message.messages.$add({
-                 content: "",
+                 content: newMessage,
                  sentAt: 12345,
-                 username: 'toast',
-                 roomID: 'fbhjkwdbf'
+                 username: $cookies.get('messengerCurrentUser'),
+                 roomID: 'khkhohpoj',
              })
         }
         
