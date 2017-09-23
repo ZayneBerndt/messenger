@@ -8,6 +8,18 @@
         console.log(Message.messages)
  		Message.getByRoomId = function(roomId) {
  			return $firebaseArray(ref.orderByChild("roomId").equalTo(roomId));
+            
+            
+        var displayCurrentTime = function() {
+        var date = new Date();
+        var hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
+        var am_pm = date.getHours() >= 12 ? "PM" : "AM" ;
+        var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+        time = hours + ":" + minutes + " " + am_pm;
+            return time;
+            
+        };
+            
  		}
  		
         
@@ -25,6 +37,10 @@
  		return Message;
  		
  	}
+    
+    
+    
+    
  	angular
  		.module('messenger')
  		.factory('Message', ['$cookies','$firebaseArray', Message]);
